@@ -1,0 +1,25 @@
+.l-lineup
+  &__wrap
+    // 蓋掉 parallax 插件 style 設定的絕對定位
+    position: relative !important
+    &:first-child
+      display: flex !important
+      justify-content: flex-end
+      align-items: flex-end
+    &:nth-child(4)
+      display: flex !important
+      justify-content: center
+  &__artist
+    width: 100%
+    max-width: 45rem
+    filter: grayscale(1)
+    transition: filter 0.3s
+    &:hover
+      filter: grayscale(0)
+    &.--img-lg
+      max-width: 56rem
+
+  &__img-mask
+    // 3:2, 4:3=100:75%, 16:9=100:56.25%
+    padding-bottom: 66.7%
+    // padding-bottom: calc(2 / 3 * 100%)

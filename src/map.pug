@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    //- pug 才能用 include，有先後順序
+    include includes/_config.pug
+    include includes/_head.pug
+    
+    meta(property="og:description" content="輸入單一頁面自己的網頁描述")
+    meta(name="description" content="輸入單一頁面自己的網頁描述")
+    meta(property="og:title" content=`地圖導覽｜${title}`)
+    title 地圖導覽｜#{title}
+  body
+    h1 首頁
+    include includes/_scripts.pug

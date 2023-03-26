@@ -1,0 +1,18 @@
+.l-header
+  +size(100%, 100vh)
+  &__swiper
+    +size(100%)
+  &__slide
+    width: 100% !important
+  &__slide.swiper-slide-active &,
+  &__slide.swiper-slide-duplicate-active &
+    &__img-mask
+      transform: scale(1.1)
+  &__img-mask
+    +size(100%)
+    transform-origin: center center
+    transform: scale(1)
+    transition: transform 15s
+
+  +media(xl)
+    height: 80vh

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Roboto:wght@700;900&display=swap')
+
+*
+  position: relative
+  box-sizing: border-box
+  &::selection
+    background-color: $color-primary
+    color: $color-white
+  &::-moz-selection
+    background-color: $color-primary
+    color: $color-white
+
+html
+  font-size: calc(16px * 10 / 16)
+  // 防止 Bootstrap 預設影響 GoTop
+  scroll-behavior: auto !important
+  +media(lg)
+    font-size: calc(15px * 10 / 16)
+  +media(ipad)
+    font-size: calc(14px * 10 / 16)
+
+body
+  margin: 0
+  background-image: url('../img/bg-dots.png')
+  background-color: $color-gray-mid
+  font-family: $font-primary
+  font-size: 1.6rem
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  letter-spacing: 0.1rem
+  line-height: 1.7
+  color: $color-gray-light
+  &.is-news-active
+    background-image: none
+    background-color: $color-primary
+
+/* ----------------------------------- */
+/* ------ Reset ------ */
+/* ----------------------------------- */
+// 防止移動端按鈕雙點擊放大
+a, area, button, input, label, select, summary, textarea
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+a, button
+  display: block
+  text-decoration: none
+  color: inherit
+  user-select: none
+  &:hover
+    text-decoration: none
+    color: inherit
+button
+  padding: 0
+  border: none
+  background: none
+img
+  max-width: 100%
+ul, ol
+  list-style: none
+  padding: 0
+  margin: 0
+
+// fonts
+h1, h2, h3, h4, p, button
+  margin: 0
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  line-height: inherit
+  color: inherit
+
+h1, h2, h3, h4
+  font-weight: 500
+
+span
+  display: block
+  line-height: inherit
+
+/* ----------------------------------- */
+/* ------ Layouts ------ */
+/* ----------------------------------- */
+section
+  padding: 12rem 4vw
+.container
+  max-width: 1560px
+  &.--narrow
+    max-width: 1200px
+
+.row
+  &.--grid
+    // 上 左右 下
+    margin: -3rem -1.5rem 0
+    > *
+      padding: 0 1.5rem
+      margin-top: 3rem
+    
